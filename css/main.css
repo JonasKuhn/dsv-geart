@@ -62,10 +62,10 @@ a:focus {
 a:hover {
 	text-decoration: none;
   color: #6a7dfe;
-  color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
-  color: -o-linear-gradient(left, #21d4fd, #b721ff);
-  color: -moz-linear-gradient(left, #21d4fd, #b721ff);
-  color: linear-gradient(left, #21d4fd, #b721ff);
+  color: -webkit-linear-gradient(left, #E38036, #009397);
+  color: -o-linear-gradient(left, #E38036, #009397);
+  color: -moz-linear-gradient(left, #E38036, #009397);
+  color: linear-gradient(left, #E38036, #009397);
 }
 
 /*---------------------------------------------*/
@@ -162,6 +162,9 @@ iframe {
   margin: 0 auto;
 }
 
+.container-login100-2{
+    background-color: rgba(255, 255, 255, 0.3);
+}
 .container-login100 {
   width: 100%;  
   min-height: 100vh;
@@ -174,7 +177,9 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #f2f2f2;  
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .wrap-login100 {
@@ -189,6 +194,15 @@ iframe {
   -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
   -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
   -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.login100-pic {
+  width: 280px;
+  margin-bottom: 30px;
+}
+
+.login100-pic img {
+  max-width: 100%;
 }
 
 
@@ -260,10 +274,10 @@ iframe {
   transition: all 0.4s;
 
   background: #6a7dfe;
-  background: -webkit-linear-gradient(left, #21d4fd, #b721ff);
-  background: -o-linear-gradient(left, #21d4fd, #b721ff);
-  background: -moz-linear-gradient(left, #21d4fd, #b721ff);
-  background: linear-gradient(left, #21d4fd, #b721ff);
+  background: -webkit-linear-gradient(left, #E38036, #009397);
+  background: -o-linear-gradient(left, #E38036, #009397);
+  background: -moz-linear-gradient(left, #E38036, #009397);
+  background: linear-gradient(left, #E38036, #009397);
 }
 
 .focus-input100::after {
@@ -327,18 +341,18 @@ iframe {
 
 .btn-show-pass:hover {
   color: #6a7dfe;
-  color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
-  color: -o-linear-gradient(left, #21d4fd, #b721ff);
-  color: -moz-linear-gradient(left, #21d4fd, #b721ff);
-  color: linear-gradient(left, #21d4fd, #b721ff);
+  color: -webkit-linear-gradient(left, #E38036, #009397);
+  color: -o-linear-gradient(left, #E38036, #009397);
+  color: -moz-linear-gradient(left, #E38036, #009397);
+  color: linear-gradient(left, #E38036, #009397);
 }
 
 .btn-show-pass.active {
   color: #6a7dfe;
-  color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
-  color: -o-linear-gradient(left, #21d4fd, #b721ff);
-  color: -moz-linear-gradient(left, #21d4fd, #b721ff);
-  color: linear-gradient(left, #21d4fd, #b721ff);
+  color: -webkit-linear-gradient(left, #E38036, #009397);
+  color: -o-linear-gradient(left, #E38036, #009397);
+  color: -moz-linear-gradient(left, #E38036, #009397);
+  color: linear-gradient(left, #E38036, #009397);
 }
 
 
@@ -372,10 +386,10 @@ iframe {
   width: 300%;
   height: 100%;
   background: #a64bf4;
-  background: -webkit-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
-  background: -o-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
-  background: -moz-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
-  background: linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+  background: -webkit-linear-gradient(right, #E38036, #009397, #E38036, #009397);
+  background: -o-linear-gradient(right, #E38036, #009397, #E38036, #009397);
+  background: -moz-linear-gradient(right, #E38036, #009397, #E38036, #009397);
+  background: linear-gradient(right, #E38036, #009397, #E38036, #009397);
   top: 0;
   left: -100%;
 
@@ -415,6 +429,10 @@ iframe {
 @media (max-width: 576px) {
   .wrap-login100 {
     padding: 77px 15px 33px 15px;
+  }
+  
+  .login100-pic {
+  margin-left: 40px;
   }
 }
 
