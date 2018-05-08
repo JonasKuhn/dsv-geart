@@ -162,9 +162,6 @@ iframe {
     margin: 0 auto;
 }
 
-.container-login100-2{
-    background-color: rgba(255, 255, 255, 0.3);
-}
 .container-login100 {
     width: 100%;  
     min-height: 100vh;
@@ -428,7 +425,8 @@ iframe {
 
 @media (max-width: 576px) {
     .wrap-login100 {
-        padding: 25px 15px 33px 15px;width: 300px;
+        padding: 19px 15px 20px 15px;
+        width: 300px;
     }
 
     .login100-pic {
