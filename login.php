@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Login V2</title>
+        <title>Login - GEART</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--===============================================================================================-->	
@@ -46,6 +46,9 @@
                 header("Location: ./index.php");
             } else {
                 header("Location: ./login.php");
+                ?>
+                <script>alert('Usuario ou senha incorretos!');</script>
+                <?php
             }
         }
         ?>
@@ -104,5 +107,11 @@
         <script src="vendor/countdowntime/countdowntime.js"></script>
         <!--===============================================================================================-->
         <script src="js/main.js"></script>
+        <script src="vendor/tilt/tilt.jquery.min.js"></script>
+        <script >
+            $('.js-tilt').tilt({
+                scale: 1.1
+            })
+        </script>
     </body>
 </html>
