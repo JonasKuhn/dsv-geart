@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <title>Login V2</title>
         <meta charset="UTF-8">
@@ -28,26 +28,47 @@
         <!--===============================================================================================-->
     </head>
     <body>
+        <?php
+        session_start();
 
+        if (isset($_POST['email']) && empty($_POST['email']) == FALSE) {
+            $email = addslashes($_POST['email']);
+            $senha = md5(addslashes($_POST['senha']));
+
+            require './bd/connection.php';
+
+            $sql = $pdo->query("SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha'");
+
+            if ($sql->rowCount() > 0) {
+                $dado = $sql->fetch();
+
+                $_SESSION['id'] = $dado['id'];
+                header("Location: ./index.php");
+            } else {
+                header("Location: ./login.php");
+            }
+        }
+        ?>
         <div class="limiter">
             <div class="container-login100">
                 <div class="container-login100-2">
                     <div class="wrap-login100">
-                        <form class="login100-form validate-form">
+                        <form class="login100-form validate-form" method="POST">
                             <div class="login100-pic js-tilt" data-tilt>
                                 <img src="images/img_geart.jpg" alt="IMG">
                             </div>
 
-                            <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+                            <div class="wrap-input100 validate-input" data-validate = "E-mail válido: 
+                                 exemplo@exemplo.com">
                                 <input class="input100" type="text" name="email">
                                 <span class="focus-input100" data-placeholder="Email"></span>
                             </div>
 
-                            <div class="wrap-input100 validate-input" data-validate="Enter password">
+                            <div class="wrap-input100 validate-input" data-validate="Digite a Senha">
                                 <span class="btn-show-pass">
                                     <i class="zmdi zmdi-eye"></i>
                                 </span>
-                                <input class="input100" type="password" name="pass">
+                                <input class="input100" type="password" name="senha">
                                 <span class="focus-input100" data-placeholder="Password"></span>
                             </div>
 
@@ -64,7 +85,6 @@
                 </div>
             </div>
         </div>
-
 
         <div id="dropDownSelect1"></div>
 
@@ -84,6 +104,5 @@
         <script src="vendor/countdowntime/countdowntime.js"></script>
         <!--===============================================================================================-->
         <script src="js/main.js"></script>
-
     </body>
 </html>
