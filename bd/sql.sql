@@ -17,7 +17,7 @@ CREATE TABLE `geart`.`usuario_arduino`(
     PRIMARY KEY (`cod_usuario_arduino`)
 ) ENGINE = InnoDB;
 
-INSERT INTO `arduino`(`ip`) VALUES ('10.0.0.5');
+INSERT INTO `arduino`(`ip`) VALUES ('192.168.0.100');
 
 INSERT INTO `usuario_arduino`( `cod_usuario`, `cod_arduino`, `potencia`, `corrente`) 
 VALUES (1, 1, '', '');
