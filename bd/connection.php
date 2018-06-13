@@ -1,7 +1,7 @@
 <?php
-$dsn = "mysql:dbname=geart;host=localhost";
-$dbuser = "root";
-$dbpasswd = "1234";
+$dsn = "mysql:dbname=geart;host=177.125.243.108:3305";
+$dbuser = "geart";
+$dbpasswd = "geart1011-$$";
 
 try {
     $pdo = new PDO($dsn, $dbuser, $dbpasswd);
