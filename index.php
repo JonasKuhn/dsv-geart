@@ -16,7 +16,7 @@ if (isset($_SESSION['id']) && empty($_SESSION['id']) == FALSE) {
             <title>GEART</title>
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <!-- Icone para index da página web -->
-            <link rel="icon" type="image/jpg" href="images/img_geart.jpg"/>
+        <link rel="icon" type="image/jpg" href="images/img_geart.jpg"  class="img-circle"/>
 
             <!-- Tell the browser to be responsive to screen width -->
             <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -70,8 +70,8 @@ if (isset($_SESSION['id']) && empty($_SESSION['id']) == FALSE) {
                                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                             </div>
                             <div class="pull-left info">
-                                <p>Alexander Pierce</p>
-                                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                                <h4>GEART</h>
+                                
                             </div>
                         </div>
                         <!-- sidebar menu: : style can be found in sidebar.less -->
@@ -86,18 +86,37 @@ if (isset($_SESSION['id']) && empty($_SESSION['id']) == FALSE) {
                 <div class="content-wrapper">
                     <!-- Content Header (Page header) -->
                     <section class="content-header">
-                        <h1>
-                            Dashboard
-                            <small>Control panel</small>
-                        </h1>
-                        <ol class="breadcrumb">
-                            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                            <li class="active">Dashboard</li>
-                        </ol>
+                        <h1>Medidor de Consumo de Energia</h1>
                     </section>
 
                     <!-- Main content -->
                     <section class="content">
+                         <!-- Main row -->
+                        <div class="row">
+                            <!-- Left col -->
+                            <section class="col-lg-7 connectedSortable">
+                                <!-- Custom tabs (Charts with tabs)-->
+                                <div class="nav-tabs-custom">
+                                    <!-- Tabs within a box -->
+                                    <ul class="nav nav-tabs pull-right">
+                                        <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
+                                        <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
+                                        <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
+                                    </ul>
+                                    <div class="tab-content no-padding">
+                                        <!-- Morris chart - Sales -->
+                                        <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 260px; width: 90%;"></div>
+                                        <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 260px; width: 90%;"></div>
+                                    </div>
+                                </div>
+                                <!-- /.nav-tabs-custom -->
+
+                                
+
+                            </section>
+                            <!-- /.Left col -->
+                        </div>
+                        <!-- /.row (main row) -->
                         <!-- Small boxes (Stat box) -->
                         <div class="row">
                             <div class="col-lg-3 col-xs-6">
@@ -162,51 +181,7 @@ if (isset($_SESSION['id']) && empty($_SESSION['id']) == FALSE) {
                             <!-- ./col -->
                         </div>
                         <!-- /.row -->
-                        <!-- Main row -->
-                        <div class="row">
-                            <!-- Left col -->
-                            <section class="col-lg-7 connectedSortable">
-                                <!-- Custom tabs (Charts with tabs)-->
-                                <div class="nav-tabs-custom">
-                                    <!-- Tabs within a box -->
-                                    <ul class="nav nav-tabs pull-right">
-                                        <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
-                                        <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
-                                        <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
-                                    </ul>
-                                    <div class="tab-content no-padding">
-                                        <!-- Morris chart - Sales -->
-                                        <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
-                                        <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
-                                    </div>
-                                </div>
-                                <!-- /.nav-tabs-custom -->
-
-                                
-
-                            </section>
-                            <!-- /.Left col -->
-                            <!-- right col (We are only adding the ID to make the widgets sortable)-->
-                            <section class="col-lg-5 connectedSortable">
-
-                                <div class="nav-tabs-custom">
-                                    <!-- Tabs within a box -->
-                                    <ul class="nav nav-tabs pull-right">
-                                        <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
-                                        <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
-                                        <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
-                                    </ul>
-                                    <div class="tab-content no-padding">
-                                        <!-- Morris chart - Sales -->
-                                        <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
-                                        <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
-                                    </div>
-                                </div>
-                                <!-- /.nav-tabs-custom -->
-                            </section>
-                            <!-- right col -->
-                        </div>
-                        <!-- /.row (main row) -->
+                       
 
                     </section>
                     <!-- /.content -->
@@ -214,9 +189,9 @@ if (isset($_SESSION['id']) && empty($_SESSION['id']) == FALSE) {
                 <!-- /.content-wrapper -->
                 <footer class="main-footer">
                     <div class="pull-right hidden-xs">
-                        <b>Version</b> 2.4.0
+                        <b>Version</b> 0.0.0.0.1
                     </div>
-                    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+                    <strong>Copyright &copy; 2018 <a href="https://adminlte.io">Geart</a>.</strong> All rights
                     reserved.
                 </footer>
 
